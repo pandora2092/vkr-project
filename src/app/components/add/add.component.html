@@ -1,0 +1,30 @@
+<form action="" #addForm="ngForm" class="addItems">
+  <!-- <input matInput type="text" required [(ngModel)]="addName" name="addName"> -->
+
+  <mat-form-field appearance="fill" class="width-100" hideRequiredMarker="true" class="addItems__field">
+    <mat-label>Название</mat-label>
+    <input matInput type="text" required [(ngModel)]="addName" name="addName">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="width-100" hideRequiredMarker="true" class="addItems__field">
+    <mat-label>Шифр рукописи</mat-label>
+    <input matInput type="text" required [(ngModel)]="addCode" name="addCode">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="width-100" hideRequiredMarker="true" class="addItems__field">
+    <mat-label>Сведения о рукописи</mat-label>
+    <input matInput type="text" required [(ngModel)]="addManuscript" name="addManuscript">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="width-100" hideRequiredMarker="true" class="addItems__field">
+    <mat-label>Заглавие</mat-label>
+    <input matInput type="text" required [(ngModel)]="addInfo" name="addInfo">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="width-100" hideRequiredMarker="true" class="addItems__field">
+    <mat-label>Библиография</mat-label>
+    <input matInput type="text" required [(ngModel)]="addBibliography" name="addBibliography">
+  </mat-form-field>
+
+  <button class="btn" type="submit" id="addNews" (click)="addNews()"> Опубликовать </button>
+</form>

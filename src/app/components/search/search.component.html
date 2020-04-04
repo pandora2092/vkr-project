@@ -1,0 +1,19 @@
+<table border="1">
+  <tr>
+    <th>Название произведения</th>
+    <th>Шифр рукописи</th>
+    <th>Сведения о рукописи</th>
+    <th>Заглавие</th>
+    <th>Библиография</th>
+   </tr>
+  <tr *ngFor="let item of table">
+    <td>{{item.name}}</td>
+    <td>{{item.code}}</td>
+    <td>{{item.manuscript}}</td>
+    <td>{{item.info}}</td>
+    <td>{{item.bibliography}}</td>
+    <td> <button (click)="deleteRow(item._id)">delete</button> </td>
+    <td> <button (click)="editRow(item._id)">edit</button> </td>
+  </tr>
+
+</table>

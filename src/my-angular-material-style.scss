@@ -1,0 +1,24 @@
+/* add custom angular material theme*/
+@import '~@angular/material/theming';
+
+/* change bootstrap variables */
+$grid-gutter-width: 16px;
+$gutter: $grid-gutter-width;
+
+/* add bootstrap libs */
+// @import '~bootstrap/scss/bootstrap.scss';
+// @import '~bootstrap/scss/_variables.scss';
+// @import '~bootstrap/scss/utilities/_sizing.scss';
+
+
+/* change default angular material theme */
+@include mat-core();
+
+$candy-theme-primary: mat-palette($mat-brown);
+$candy-theme-accent: mat-palette($mat-brown, 900, 800, 900);
+$candy-theme-warn: mat-palette($mat-brown);
+$candy-theme-theme: mat-light-theme($candy-theme-primary, $candy-theme-accent, $candy-theme-warn);
+
+@include angular-material-theme($candy-theme-theme);
+
+
